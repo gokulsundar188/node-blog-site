@@ -9,7 +9,12 @@ app.listen(2000);
 
 // routing
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
+    const blogs = [
+        { title: "Blog title", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { title: "Blog title", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+        { title: "Blog title", snippet: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+    ];
+    res.render('index', { title: 'Home', blogs });
 });
 
 app.get('/about', (req, res) => {
