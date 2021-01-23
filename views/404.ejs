@@ -1,29 +1,15 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Blog | <%= title %>
-    </title>
-</head>
 
-<body>
-    <nav>
-        <div class="site-title">
-            <a href="/">Blog</a>
-            <p>A Blog Site</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
+<%- include('./partials/head.ejs') %>
 
-    <div class="not-found-content">
-        <h2>404 oops!</h2>
-        <h3>Page Not Found.</h3>
-    </div>
-</body>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <div class="not-found content">
+                <h2>404 oops!</h2>
+                <h3>Page Not Found.</h3>
+            </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
 
 </html>

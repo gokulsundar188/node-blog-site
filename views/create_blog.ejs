@@ -1,36 +1,22 @@
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Blog | <%= title %>
-    </title>
-</head>
 
-<body>
-    <nav>
-        <div class="site-title">
-            <a href="/">Blog</a>
-            <p>A Blog Site</p>
-        </div>
-        <ul>
-            <li><a href="/">Blogs</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs/create">New Blog</a></li>
-        </ul>
-    </nav>
+<%- include('./partials/head.ejs') %>
 
-    <div class="create-blogs-content">
-        <form>
-            <label for="title">Blog title:</label>
-            <input type="text" id="title" required>
-            <label for="snippet">Blog snippet:</label>
-            <input type="text" id="snippet" required>
-            <label for="body">Blog body:</label>
-            <textarea id="body" required></textarea>
-            <button>submit</button>
-        </form>
-    </div>
-</body>
+    <body>
+        <%- include('./partials/nav.ejs') %>
+            <div class="create-blog content">
+                <form>
+                    <label for="title">Blog title:</label>
+                    <input type="text" id="title" required>
+                    <label for="snippet">Blog snippet:</label>
+                    <input type="text" id="snippet" required>
+                    <label for="body">Blog body:</label>
+                    <textarea id="body" required></textarea>
+                    <button>submit</button>
+                </form>
+            </div>
+    </body>
+    <%- include('./partials/footer.ejs') %>
 
 </html>
