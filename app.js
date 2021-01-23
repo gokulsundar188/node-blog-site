@@ -5,15 +5,19 @@ const app = express();
 app.set('view engine', 'ejs');
 // app.set('views', 'newViewFolder');
 
-app.listen(3000);
+app.listen(2000);
 
 // routing
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'Home' });
 });
 
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', { title: 'About' });
+});
+
+app.get('/blogs/create', (req, res) => {
+    res.render('create_blog', { title: 'Create a new blog' });
 });
 
 app.get('/about-us', (req, res) => {
@@ -21,5 +25,5 @@ app.get('/about-us', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.render('404');
+    res.render('404', { title: '404' });
 });
