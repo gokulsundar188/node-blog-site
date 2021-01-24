@@ -1,6 +1,6 @@
 
 const about_details = (req, res) => {
-    res.render('about', { title: 'About' });
+    res.render('./about/about', { title: 'About' });
 }
 
 const about_redirect = (req, res) => {
