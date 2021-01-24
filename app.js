@@ -23,8 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
 // routing
-app.use(_homeRouter);
-app.use(_blogRouter);
+app.use('/', _homeRouter);
+app.use('/blogs', _blogRouter);
 app.use(_aboutRouter);
 app.use(_404Router);
-
