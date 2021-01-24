@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const homeController = require('../controllers/homeController');
 
-router.get('/', (req, res) => {
-    res.redirect('/blogs');
-});
+router.get('/', homeController.home_redirect);
 
 module.exports = router;

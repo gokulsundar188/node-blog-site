@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const aboutController = require('../controllers/aboutController');
 
-router.get('/about', (req, res) => {
-    res.render('about', { title: 'About' });
-});
+router.get('/about', aboutController.about_details);
 
-router.get('/about-us', (req, res) => {
-    res.redirect('/about');
-});
+router.get('/about-us', aboutController.about_redirect);
 
 module.exports = router;
