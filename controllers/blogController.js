@@ -35,7 +35,10 @@ const blog_details = (req, res) => {
             console.log(result);
             res.render('./blog/details', { blog: result, title: 'Blog details' })
         })
-        .catch((err) => { console.log(err); });
+        .catch((err) => {
+            console.log(err);
+            res.status(404).render('./error/404', { title: '404' });
+        });
 }
 
 const blog_delete = (req, res) => {
@@ -47,7 +50,8 @@ const blog_delete = (req, res) => {
         })
         .catch((err) => {
             console.log(err);
-            res.redirect('/');
+            // res.redirect('/');
+            res.status(404).render('./error/404', { title: '404' });
         });
 }
 
