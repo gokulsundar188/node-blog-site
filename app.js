@@ -6,13 +6,14 @@ const _aboutRouter = require('./routes/aboutRoute');
 const _homeRouter = require('./routes/homeRoute');
 const _404Router = require('./routes/404Route');
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Connect to mongoDB
 const dbURI = 'mongodb+srv://TestUser:test123@blogdemo.ckmee.mongodb.net/BlogDemo?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {
         console.log('connected to db');
-        app.listen(3000);
+        app.listen(port);
     })
     .catch((err) => console.log(err));
 
